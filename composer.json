@@ -1,0 +1,9 @@
+{
+  "require": {
+    "zircote/swagger-php": "^4.2",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.4"
+  }
+}

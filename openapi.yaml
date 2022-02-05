@@ -1,0 +1,7 @@
+openapi: 3.0.0
+info:
+  title: 'Pet Store Api'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+  version: 1.0.0
