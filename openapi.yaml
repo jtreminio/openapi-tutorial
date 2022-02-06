@@ -5,3 +5,39 @@ info:
     name: MIT
     url: 'https://opensource.org/licenses/MIT'
   version: 1.0.0
+paths:
+  /pet:
+    post:
+      tags:
+        - Pet
+      summary: 'Add a new pet'
+      operationId: petCreate
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Pet'
+components:
+  schemas:
+    Pet:
+      properties:
+        name:
+          type: string
+        age:
+          type: integer
+        photo:
+          type: string
+          format: binary
+        type:
+          type: string
+          enum:
+            - dog
+            - cat
+            - fish
+        status:
+          type: string
+          enum:
+            - available
+            - pending
+            - sold
+      type: object

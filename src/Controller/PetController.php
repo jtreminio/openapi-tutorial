@@ -4,13 +4,23 @@ declare(strict_types=1);
 
 namespace PetStoreApi\Controller;
 
+use OpenApi\Annotations as OA;
 use PetStoreApi\Model;
 use PetStoreApi\RequestInterface;
 
 class PetController
 {
     /**
-     * POST /pet
+     * @OA\Post(path="/pet",
+     *     summary="Add a new pet",
+     *     operationId="petCreate",
+     *     tags={"Pet"},
+     *     @OA\RequestBody(
+     *         @OA\MediaType(mediaType="multipart/form-data",
+     *             @OA\Schema(ref="#/components/schemas/Pet"),
+     *         ),
+     *     ),
+     * )
      */
     public function petCreate(RequestInterface $request): string
     {
